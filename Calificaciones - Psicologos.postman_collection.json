@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "e05960eb-d165-400d-bbc9-00830ae7383c",
+		"name": "Calificaciones - Psicologos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear un Psicologo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"nombre\":\"Psicologo Ejemplo\",\r\n    \"promedio_calificaciones\": 0.0,\r\n    \"cantidad_calificaciones\": 0,\r\n    \"suma_calificaciones\": 0.0\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/calificacionesPsicologos/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calificacionesPsicologos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Calificacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mensaje\":\"Mala atencion\", \"puntuacion\": 2.0\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/calificacionesPsicologos/calificacion/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calificacionesPsicologos",
+						"calificacion",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar un Psicologo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/calificacionesPsicologos/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"calificacionesPsicologos",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
