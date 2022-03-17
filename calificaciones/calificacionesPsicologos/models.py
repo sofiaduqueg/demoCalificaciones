@@ -6,7 +6,7 @@ from django.db import models
 
 class Psicologo(models.Model):
     nombre = models.CharField(max_length=100) 
-    promedio_calificaciones = models.FloatField() 
+    promedio_calificaciones = models.FloatField()
     cantidad_calificaciones = models.IntegerField()
     suma_calificaciones = models.FloatField()
     def __str__(self):

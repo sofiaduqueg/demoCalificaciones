@@ -6,7 +6,10 @@ def get_psicologo(id):
     return psicologo
 
 def create_psicologo(nuevo_psicologo):
-    psicologo = Psicologo(nombre=nuevo_psicologo["nombre"])
+    psicologo = Psicologo(nombre=nuevo_psicologo["nombre"], 
+    promedio_calificaciones=nuevo_psicologo["promedio_calificaciones"], 
+    cantidad_calificaciones=nuevo_psicologo["cantidad_calificaciones"], 
+    suma_calificaciones=nuevo_psicologo["suma_calificaciones"])
     psicologo.save()
     return psicologo  
 
