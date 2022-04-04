@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "simulacionVivienda.apps.SimulacionviviendaConfig",
     "calificacionesPsicologos.apps.CalificacionespsicologosConfig",
     'django.contrib.admin',
     'django.contrib.auth',
