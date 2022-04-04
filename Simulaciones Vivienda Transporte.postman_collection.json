@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "a3a685a2-2522-4801-b0dc-b0078f937539",
+		"name": "Simulaciones Vivienda Transporte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear una Vivienda",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nombre\":\"City U\",\r\n\t\"precio\": 1.000,\r\n\t\"parqueadero\": \"True\",\r\n\t\"pagoPorSemestre\": \"True\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/simulacion/crearVivienda/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"simulacion",
+						"crearVivienda",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Vivienda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/simulacion/consultarVivienda/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"simulacion",
+						"consultarVivienda",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Medio de transporte",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nombre\":\"Transmilenio\",\r\n\t\"precio\":2.500\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/simulacion/crearTransporte/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"simulacion",
+						"crearTransporte",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar opciones de transporte de una vivienda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/simulacion/consultarTransportes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"simulacion",
+						"consultarTransportes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
