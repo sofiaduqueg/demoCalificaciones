@@ -24,5 +24,4 @@ class Consulta(models.Model):
     precioMaximo = models.FloatField()
     parqueadero = models.BooleanField()
     distanciaAlaUniversidad = models.IntegerField()
-    def __str__(self):
-        return '{}'.format(self.nombre)
+    

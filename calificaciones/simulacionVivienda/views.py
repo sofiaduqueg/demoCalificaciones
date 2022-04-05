@@ -31,6 +31,12 @@ def transporte_view(request, id_vivienda):
 def transportes_vivienda_view(request, id_vivienda):
     if request.method == 'GET':
         transportes= vl.get_transportesVivienda(id_vivienda)
-        return HttpResponse(transportes, 'application/json')        
+        return HttpResponse(transportes, 'application/json')  
+
+@csrf_exempt
+def consulta_view(request):
+    if request.method == 'POST':
+        viviendasConsulta = vl.get_consulta(json.loads(request.body))  
+        return HttpResponse(viviendasConsulta, 'application/json')            
 
 
