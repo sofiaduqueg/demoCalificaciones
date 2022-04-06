@@ -1,0 +1,19 @@
+CONFIGURACIÓN BALANCEADOR DE CARGA 
+
+IP Balanceador: 172.24.41.127
+
+Configuración Balanceador:
+
+upstream backend {
+   least_conn;
+   server 172.24.41.121:8082;
+   server 172.24.41.126:8082;
+}
+
+server {
+  listen 80;
+
+  location / {
+     proxy_pass http://backend;
+  }
+}
