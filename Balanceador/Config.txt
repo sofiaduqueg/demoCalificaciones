@@ -8,6 +8,7 @@ upstream backend {
    least_conn;
    server 172.24.41.121:8082;
    server 172.24.41.126:8082;
+   server 172.24.41.129:8082;
 }
 
 server {
