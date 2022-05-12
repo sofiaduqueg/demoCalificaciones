@@ -83,8 +83,14 @@ DATABASES = {
         'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '5432'
-        
-
+    },
+    'respaldo': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sprint3db',
+        'USER': 'sprint3',
+        'PASSWORD': 'sprint3',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
